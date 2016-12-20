@@ -1,4 +1,4 @@
-//     Backbone.js 1.0.0
+  //     Backbone.js 1.0.0
 
 //     (c) 2010-2013 Jeremy Ashkenas, DocumentCloud Inc.
 //     Backbone may be freely distributed under the MIT license.
@@ -39,6 +39,9 @@
   // Require Underscore, if we're on the server, and it's not already present.
   var _ = root._;
   if (!_ && (typeof require !== 'undefined')) _ = require('underscore');
+
+  // Require jQuery, if we're on the server, and it's not already present.
+  if (!root.$ && (typeof require !== 'undefined')) root.$ = require('jquery');
 
   // For Backbone's purposes, jQuery, Zepto, Ender, or My Library (kidding) owns
   // the `$` variable.
